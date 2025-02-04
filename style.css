@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+
+:root {
+  --body-color: #333;
+  --rich-purple: #753682;
+  --vibrant-red: #bf2e34;
+  --brick-red: #c7365f;
+  --white: #fff;
+  --light-grey: #ddd;
+  --dark-grey: #444;
+  --vey-dark-grey: #2f2f2f;
+  --main-bg-color: rgba(255, 255, 255, 0.35);
+  --btn-bg-color: rgba(255, 255, 255, 0.6);
+  --active-bg-color: rgba(255, 255, 255, 0.4);
+  --very-dark-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  --dark-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  --medium-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  --light-box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top left,
+    var(--rich-purple) 0%,
+    var(--vibrant-red) 100%
+  );
+  color: var(--body-color);
+  font-weight: 400;
+  font-family: 'Nunito', sans-serif;
+}
+
+main {
+  position: relative;
+  display: flex;
+  width: 100rem;
+  height: 60rem;
+  background-color: var(--main-bg-color);
+  border-radius: 9px;
+  box-shadow: var(--very-dark-box-shadow);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  overflow: hidden;
+
+  .section-player {
+    padding: 9rem;
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    align-items: center;
+    transition: all 0.75s;
+
+    .name {
+      position: relative;
+      margin-bottom: 1rem;
+      font-weight: 300;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      word-spacing: 2px;
+    }
+
+    .score {
+      margin-bottom: auto;
+      font-weight: 300;
+      font-size: 8rem;
+      color: var(--brick-red);
+    }
+
+    .current {
+      padding: 2rem;
+      width: 65%;
+      text-align: center;
+      background-color: var(--brick-red);
+      color: var(--white);
+      border-radius: 9px;
+      opacity: 0.8;
+      transition: all 0.75s;
+
+      .current-label {
+        margin-bottom: 1rem;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        color: var(--light-grey);
+      }
+
+      .current-score {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  .player--active {
+    background-color: var(--active-bg-color);
+
+    .name {
+      font-weight: 700;
+    }
+
+    .score {
+      font-weight: 400;
+    }
+
+    .current {
+      opacity: 1;
+    }
+  }
+
+  .player--winner {
+    background-color: var(--vey-dark-grey);
+
+    .name {
+      font-weight: 700;
+      color: var(--brick-red);
+    }
+  }
+
+  .dice {
+    position: absolute;
+    top: 16.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10rem;
+    box-shadow: var(--dark-box-shadow);
+  }
+
+  .btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.7rem 2.5rem;
+    background-color: var(--btn-bg-color);
+    color: var(--dark-grey);
+    border: none;
+    border-radius: 50rem;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--light-box-shadow);
+    font: 400 1.8rem 'Nunito', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:first-letter {
+      display: inline-block;
+      margin-right: 0.7rem;
+      font-size: 2.4rem;
+    }
+
+    &:active {
+      box-shadow: var(--medium-box-shadow);
+      transform: translate(-50%, 3px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .btn--new {
+    top: 4rem;
+  }
+
+  .btn--roll {
+    top: 39.3rem;
+  }
+
+  .btn--hold {
+    top: 46.1rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
