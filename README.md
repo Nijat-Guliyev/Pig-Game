@@ -16,4 +16,4 @@ There are two players, Player 1 and Player 2. Start the game by clicking the "Di
 
 ## Author
 
-Created by [Nijat Guliyev](https://www.linkedin.com/in/nijat-guliyev-1949a4294/). Feel free to check out my [GitHub profile](https://github.com/Nijat-Guliyev) for more projects!
+Modified by [Nijat Guliyev](https://www.linkedin.com/in/nijat-guliyev-1949a4294/). Feel free to check out my [GitHub profile](https://github.com/Nijat-Guliyev) for more projects!
